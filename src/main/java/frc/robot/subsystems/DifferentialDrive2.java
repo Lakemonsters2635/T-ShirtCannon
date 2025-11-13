@@ -3,15 +3,12 @@
 // the WPILib BSD license file in the root directory of this project.
 
 package frc.robot.subsystems;
-import frc.robot.Constants;
-import frc.robot.RobotContainer;
-import edu.wpi.first.wpilibj.motorcontrol.Talon;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
-import edu.wpi.first.wpilibj.PWM;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
+import frc.robot.RobotContainer;
 
 // DifferentialDrive2 expects 4 motors instead of 2 motors.
 public class DifferentialDrive2 extends SubsystemBase {
@@ -53,8 +50,11 @@ public class DifferentialDrive2 extends SubsystemBase {
     
   @Override  
   public void periodic() {
-    drive(RobotContainer.m_rightStick.getX(), RobotContainer.m_rightStick.getY());
-    // drive(RobotContainer.m_controller.getLeftY()/2,RobotContainer.m_controller.getRawAxis(5)/2);
+    //
+    // drive(RobotContainer.m_rightStick.getY(), RobotContainer.m_rightStick.getY());
+
+    // Controls with logitech console
+    drive(-RobotContainer.m_controller.getRawAxis(1), -RobotContainer.m_controller.getRawAxis(3));
     // drive(RobotContainer.m_rightStick.getY(),RobotContainer.m_rightStick.getY());
     // This method will be called once per scheduler run
   }
