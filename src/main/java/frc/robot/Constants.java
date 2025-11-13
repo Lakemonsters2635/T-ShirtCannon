@@ -18,15 +18,15 @@ public final class Constants {
     public static final int CONTROLLER_CHANNEL = 2; // For xbox controller
 
     public static final int RELAY_CHANNEL = 0; // Channel for relay (controls the shooting)
-    public static final int ROTARY_CHANNEL = 4; // Channel for rotating motor
+    public static final int ROTARY_CHANNEL = 11;//4; // Channel for rotating motor
 
     public final static int ROTATION_ENCODER_1 = 2; //DIO1
     public final static int ROTATION_ENCODER_2 = 1; //DIO2
-    public static final int ROTATOR_SWITCH_CHANNEL = 3; //DI03
+    public static final int ROTATOR_SWITCH_CHANNEL = 0;//3; //DI03
 
     // BUTTON BINDINGS
     public static final int SHOOTER_BUTTON = 1; // For Joysticks
-    public static final int ROTATION_BUTTON = 1; // For Joysticks
+    public static final int ROTATION_BUTTON = 3; // For Joysticks
 
     // xbox controller Constants
     public final int LEFT_X_AXIS = 0;

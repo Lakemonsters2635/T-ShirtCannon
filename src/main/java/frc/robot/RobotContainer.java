@@ -34,21 +34,21 @@ public class RobotContainer {
     private void configureBindings(){
         
         //xbox controller buttons
-        Trigger shooterButtonX = new JoystickButton(m_controller, XboxController.Button.kB.value);
+        Trigger shooterButtonX = new JoystickButton(m_controller, 3);
         shooterButtonX.onTrue(new ShooterCommand(m_shooterSubsystem));
 
-        Trigger rotationButtonX = new JoystickButton(m_controller, XboxController.Button.kA.value);
+        Trigger rotationButtonX = new JoystickButton(m_controller, 2);
         rotationButtonX.onTrue(new ArmRotationCommand(m_RotarySubsystem));
         
-        Trigger combinedButton = new JoystickButton(m_controller, XboxController.Button.kX.value);
-        combinedButton.onTrue(new SequentialCommandGroup(new ArmRotationCommand(m_RotarySubsystem),new ShooterCommand(m_shooterSubsystem)));
+        // Trigger combinedButton = new JoystickButton(m_controller, XboxController.Button.kX.value);
+        // combinedButton.onTrue(new SequentialCommandGroup(new ArmRotationCommand(m_RotarySubsystem),new ShooterCommand(m_shooterSubsystem)));
             
         //joystick buttons
-        Trigger shooterButtonJ = new JoystickButton(m_rightStick, Constants.SHOOTER_BUTTON);
-        shooterButtonJ.onTrue(new ShooterCommand(m_shooterSubsystem));
+        // Trigger shooterButtonJ = new JoystickButton(m_rightStick, Constants.SHOOTER_BUTTON);
+        // shooterButtonJ.onTrue(new ShooterCommand(m_shooterSubsystem));
 
-        Trigger rotationButtonJ = new JoystickButton(m_leftStick, Constants.ROTATION_BUTTON);
-        rotationButtonJ.onTrue(new ArmRotationCommand(m_RotarySubsystem));
+        // Trigger rotationButtonJ = new JoystickButton(m_rightStick, Constants.ROTATION_BUTTON);
+        // rotationButtonJ.onTrue(new ArmRotationCommand(m_RotarySubsystem));
 
         System.out.println("Robot.configureBindigs()");
     }

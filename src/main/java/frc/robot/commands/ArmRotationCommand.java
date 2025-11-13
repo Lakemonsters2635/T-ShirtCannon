@@ -32,7 +32,7 @@ public class ArmRotationCommand extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    rotarySubsystem.resetEncoderCounts();
+    // rotarySubsystem.resetEncoderCounts();
     System.out.println("ArmRotationCommand.initialize()");
 
     rotarySubsystem.rotate();

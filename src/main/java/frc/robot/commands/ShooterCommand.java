@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Relay.Value;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.ShooterSubsystem;
@@ -44,6 +45,7 @@ public class ShooterCommand extends Command {
   @Override
   public void execute() {
     endTime = m_timer.get();
+    SmartDashboard.putBoolean("isShooterForward", isShooterForward);
   }
 
   // Called once the command ends or is interrupted.
@@ -58,8 +60,10 @@ public class ShooterCommand extends Command {
   @Override
   public boolean isFinished() {
     if (endTime-startTime > delay && isShooterForward == true) {
+      System.out.println("DONNEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
       return true;
     }
     return false;
   }
+
 }

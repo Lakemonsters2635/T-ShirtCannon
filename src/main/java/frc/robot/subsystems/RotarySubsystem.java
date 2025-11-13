@@ -24,7 +24,7 @@ public class RotarySubsystem extends SubsystemBase{
 
   public RotarySubsystem(){
     // Creates a new talon rotary motor
-    rotationEncoder = new Encoder(Constants.ROTATION_ENCODER_1, Constants.ROTATION_ENCODER_2);
+    // rotationEncoder = new Encoder(Constants.ROTATION_ENCODER_1, Constants.ROTATION_ENCODER_2);
     rotaryMotor = new TalonSRX(Constants.ROTARY_CHANNEL); 
     rotatorSwitch = new DigitalInput(Constants.ROTATOR_SWITCH_CHANNEL);
   }
@@ -32,6 +32,8 @@ public class RotarySubsystem extends SubsystemBase{
   public void rotate() {
     // We need to put a speed value
    // System.out.println("Speed Setting.........");
+   
+   // Only run the rotation one way, when ran the other way it might break the switch
     rotaryMotor.set(ControlMode.PercentOutput, Constants.ROTARY_SPEED);
     //System.out.println("Speed Set!!!!!!!!");
   }
@@ -40,15 +42,15 @@ public class RotarySubsystem extends SubsystemBase{
     rotaryMotor.set(ControlMode.PercentOutput, Constants.ROTARY_STOP);
   }
 
-  public void resetEncoderCounts() {
-    rotationEncoder.reset();
-  }
+  // public void resetEncoderCounts() {
+  //   rotationEncoder.reset();
+  // }
 
-  public double getEncoderCounts() {
-    //System.out.println("Count is " + theta); 
+  // public double getEncoderCounts() {
+  //   //System.out.println("Count is " + theta); 
     
-    return rotationEncoder.getRaw();
-  }
+  //   return rotationEncoder.getRaw();
+  // }
   
   public boolean getRotatorSwitch() {
     return rotatorSwitch.get();
