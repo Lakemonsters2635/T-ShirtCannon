@@ -31,7 +31,6 @@ public class ShooterCommand extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-
     m_timer.start();
     startTime = m_timer.get();
 

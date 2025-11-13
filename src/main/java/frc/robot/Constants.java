@@ -17,7 +17,7 @@ public final class Constants {
     public static final int RIGHT_JOYSTICK_CHANNEL = 1; // For xbox controller
     public static final int CONTROLLER_CHANNEL = 2; // For xbox controller
 
-    public static final int RELAY_CHANNEL = 0; // Channel for relay (controls the shooting)
+    public static final int RELAY_CHANNEL = 2; // Channel for relay (controls the shooting)
     public static final int ROTARY_CHANNEL = 11;//4; // Channel for rotating motor
 
     public final static int ROTATION_ENCODER_1 = 2; //DIO1

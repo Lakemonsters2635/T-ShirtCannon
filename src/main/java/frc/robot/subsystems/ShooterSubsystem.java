@@ -92,5 +92,7 @@ public void shootOff() {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+    System.out.println("Channel: " + m_relay.getChannel());
+    System.out.println("Relay: " + m_relay.get());
   }
 }

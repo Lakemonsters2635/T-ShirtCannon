@@ -53,8 +53,8 @@ public class DifferentialDrive2 extends SubsystemBase {
     
   @Override  
   public void periodic() {
-
-    drive(RobotContainer.m_controller.getLeftY()/2,RobotContainer.m_controller.getRawAxis(5)/2);
+    drive(RobotContainer.m_rightStick.getX(), RobotContainer.m_rightStick.getY());
+    // drive(RobotContainer.m_controller.getLeftY()/2,RobotContainer.m_controller.getRawAxis(5)/2);
     // drive(RobotContainer.m_rightStick.getY(),RobotContainer.m_rightStick.getY());
     // This method will be called once per scheduler run
   }
