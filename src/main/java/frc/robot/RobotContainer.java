@@ -38,10 +38,12 @@ public class RobotContainer {
         // Trigger rotationButtonX = new JoystickButton(m_rightStick, 2); // rotation
         // rotationButtonX.onTrue(new ArmRotationCommand(m_RotarySubsystem));
         
-        Trigger shooterButtonX = new JoystickButton(m_controller, 8);
-        shooterButtonX.onTrue(new ShooterCommand(m_shooterSubsystem));
+        Trigger shooterButtonX1 = new JoystickButton(m_controller, Constants.SHOOTER_BUTTON1);
+        Trigger shooterButtonX2 = new JoystickButton(m_controller, Constants.SHOOTER_BUTTON2);
+        shooterButtonX1.onTrue(new ShooterCommand(m_shooterSubsystem));
+        shooterButtonX2.onTrue(new ShooterCommand(m_shooterSubsystem));
 
-        Trigger rotationButtonX = new JoystickButton(m_controller, 7);
+        Trigger rotationButtonX = new JoystickButton(m_controller, Constants.ROTATION_BUTTON);
         rotationButtonX.onTrue(new ArmRotationCommand(m_RotarySubsystem));
         
         // Trigger combinedButton = new JoystickButton(m_controller, XboxController.Button.kX.value);

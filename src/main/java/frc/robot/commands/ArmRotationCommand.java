@@ -14,8 +14,6 @@ public class ArmRotationCommand extends Command {
   /** Creates a new ArmRotationCommand. */
   private RotarySubsystem rotarySubsystem;
   private Timer timer;
-  private double startTime;
-  private double endTime;
   private double delay = .8;
 
   public ArmRotationCommand(RotarySubsystem rotarySubsystem){
@@ -38,13 +36,11 @@ public class ArmRotationCommand extends Command {
     rotarySubsystem.rotate();
     timer.reset();
     timer.start();
-    startTime = timer.get();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute(){
-    endTime = timer.get();
   }
 
   // Called once the command ends or is interrupted.
